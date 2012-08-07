@@ -1,0 +1,15 @@
+*~
+*.py[co]
+.project
+.pydevproject
+.settings/
+.idea/
+docs/_build/
+*.egg-info
+dist/
+bin/
+include/
+lib/
+test.py
+local/
+man/

@@ -10,7 +10,7 @@ class TestUrlparse(unittest.TestCase):
 
     def test_parse_url(self):
         url = Url('http://www.mozilla.org/en-US/')
-        self.assertEqual('http://www.mozilla.org/en-US/', url)
+        self.assertEqual('http://www.mozilla.org/en-US/', str(url))
         self.assertEqual('http://www.mozilla.org/en-US/', url.url)
         self.assertEqual('http', url.scheme)
         self.assertEqual('www.mozilla.org', url.host)

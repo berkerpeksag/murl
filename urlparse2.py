@@ -1,6 +1,6 @@
 # coding: utf-8
 
-from urlparse import urlparse, urlunparse, ParseResult
+from urlparse import urlparse, urlunparse, ParseResult, parse_qs
 
 URL_PARTS = ('scheme', 'netloc', 'path', 'params', 'query', 'fragment')
 
@@ -27,9 +27,27 @@ class Url(object):
     def host(self):
         return self.params.get('netloc')
 
+    @host.setter
+    def host(self, value):
+        self.params['netloc'] = value
+
+    @property
+    def path(self):
+        return self.params.get('path')
+
+    @path.setter
+    def path(self, value):
+        self.params['path'] = value
+
     @property
     def querystring(self):
-        return self.params.get('query')
+        if self.params.get('query') is not None:
+            return parse_qs(self.params.get('query'))
+        return None
+
+    @property
+    def fragment(self):
+        return self.params.get('fragment')
 
     def __str__(self):
         return self.url

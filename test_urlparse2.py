@@ -29,7 +29,8 @@ class TestUrlparse(unittest.TestCase):
         url = Url(url_string)
         self.assertEqual(url_string, str(url))
         url.scheme = 'https'
-        self.assertEqual(url_string, str(url))
+        self.assertEqual(
+            'https://githubbadge.appspot.com/badge/berkerpeksag?s=1', str(url))
 
 if __name__ == '__main__':
     unittest.main()

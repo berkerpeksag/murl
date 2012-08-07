@@ -1,4 +1,18 @@
-# Urlparse2
+# urlparse2
+
+[![Travis CI](https://secure.travis-ci.org/berkerpeksag/urlparse2.png)](http://travis-ci.org/berkerpeksag/urlparse2)
+
+urlparse2 is a tiny wrapper for Python's [urlparse](http://docs.python.org/library/urlparse.html) module.
+
+## Installation
+
+To install urlparse2, simply:
+
+```bash
+$ pip install urlparse2
+```
+
+## Usage
 
 ```py
 >>> from urlparse2 import Url

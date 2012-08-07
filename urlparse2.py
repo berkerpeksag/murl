@@ -1,11 +1,8 @@
 # coding: utf-8
 
-from collections import namedtuple
-from urlparse import urlparse, urlunparse
+from urlparse import urlparse, urlunparse, ParseResult
 
 URL_PARAMS = ('scheme', 'netloc', 'path', 'params', 'query', 'fragment')
-# See http://docs.python.org/library/urlparse.html#urlparse.ParseResult
-ParseResult = namedtuple('ParseResult', ' '.join(URL_PARAMS))
 
 
 class Url(object):

@@ -23,6 +23,10 @@ class Url(object):
     def scheme(self):
         return self.params.get('scheme')
 
+    @scheme.setter
+    def scheme(self, value):
+        self.params['scheme'] = value
+
     @property
     def host(self):
         return self.params.get('netloc')

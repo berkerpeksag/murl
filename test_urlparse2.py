@@ -16,5 +16,13 @@ class TestUrlparse(unittest.TestCase):
         self.assertEqual('www.mozilla.org', url.host)
         self.assertEqual(None, url.querystring)
 
+    def test_update_scheme(self):
+        url = Url('http://githubbadge.appspot.com/badge/berkerpeksag?s=1')
+        old_scheme = url.scheme
+        self.assertEqual('http', url.scheme)
+        url.scheme = 'https'
+        self.assertEqual('https', url.scheme)
+        self.assertNotEqual(old_scheme, url.scheme)
+
 if __name__ == '__main__':
     unittest.main()

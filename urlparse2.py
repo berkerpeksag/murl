@@ -3,10 +3,9 @@
 from collections import namedtuple
 from urlparse import urlparse, urlunparse
 
-URL_PARAMS = ['scheme', 'netloc', 'path', 'params', 'query', 'fragment']
+URL_PARAMS = ('scheme', 'netloc', 'path', 'params', 'query', 'fragment')
 # See http://docs.python.org/library/urlparse.html#urlparse.ParseResult
-ParseResult = namedtuple('ParseResult',
-    'scheme netloc path params query fragment')
+ParseResult = namedtuple('ParseResult', ' '.join(URL_PARAMS))
 
 
 class Url(object):

@@ -14,7 +14,6 @@ class Url(object):
         self._url = url
         self.params = dict((URL_PARAMS[k], v if v else None)
             for k, v in enumerate(urlparse(self._url)))
-        print self.params
 
     @property
     def url(self):

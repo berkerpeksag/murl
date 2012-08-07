@@ -6,10 +6,6 @@ from urlparse import urlparse
 URL_PARAMS = ['scheme', 'netloc', 'path', 'params', 'query', 'fragment']
 
 
-class InvalidParameter(ValueError):
-    pass
-
-
 class Url(object):
     def __init__(self, url, **kwargs):
         self.url = url

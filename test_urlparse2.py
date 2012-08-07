@@ -25,10 +25,11 @@ class TestUrlparse(unittest.TestCase):
         self.assertNotEqual(old_scheme, url.scheme)
 
     def test_update_scheme_and_url(self):
-        url = Url('http://githubbadge.appspot.com/badge/berkerpeksag?s=1')
-        self.assertEqual('http://githubbadge.appspot.com/badge/berkerpeksag?s=1', str(url))
+        url_string = 'http://githubbadge.appspot.com/badge/berkerpeksag?s=1'
+        url = Url(url_string)
+        self.assertEqual(url_string, str(url))
         url.scheme = 'https'
-        self.assertEqual('https://githubbadge.appspot.com/badge/berkerpeksag?s=1', str(url))
+        self.assertEqual(url_string, str(url))
 
 if __name__ == '__main__':
     unittest.main()

@@ -2,6 +2,8 @@
 
 from urlparse import urlparse, urlunparse, parse_qs, ParseResult
 
+#: Parts for RFC 3986 URI syntax
+#: <scheme>://<netloc>/<path>;<params>?<query>#<fragment>
 URL_PARTS = ('scheme', 'netloc', 'path', 'params', 'query', 'fragment')
 
 

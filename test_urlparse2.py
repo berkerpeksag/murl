@@ -80,5 +80,9 @@ class TestUrlparse(unittest.TestCase):
         self.assertEqual('http', url.scheme)
         self.assertEqual('http://www.python.org', url.url)
 
+    def test_rfc1808(self):
+        url = Url('www.python.org')
+        self.assertEqual('//www.python.org', url.host)
+
 if __name__ == '__main__':
     unittest.main()

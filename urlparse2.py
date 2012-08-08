@@ -30,6 +30,13 @@ class Url(object):
 
     @property
     def host(self):
+        # Following the syntax specifications in RFC 1808,
+        # urlparse recognizes a netloc only if it is properly
+        # introduced by ‘//’. Otherwise the input is presumed
+        # to be a relative URL and thus to start with a path component.
+        if self.params.get('path').startswith('www.'):
+            self.params['netloc'] = '//' + self.params.get('path')
+            self.params['path'] = ''
         return self.params.get('netloc')
 
     @host.setter

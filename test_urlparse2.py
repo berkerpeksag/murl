@@ -74,6 +74,11 @@ class TestUrlparse(unittest.TestCase):
         url = Url(url_string)
         self.assertEqual('top', url.fragment)
 
+    def test_change_scheme(self):
+        url_str = '//www.python.org'
+        url = Url(url_str, scheme='http')
+        self.assertEqual('http', url.scheme)
+        self.assertEqual('http://www.python.org', url.url)
 
 if __name__ == '__main__':
     unittest.main()

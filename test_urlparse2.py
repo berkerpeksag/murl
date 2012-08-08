@@ -69,7 +69,7 @@ class TestUrlparse(unittest.TestCase):
         self.assertEqual('test.python.org:5432', url.host)
         self.assertEqual('/foo/', url.path)
 
-    def test_url_with_port(self):
+    def test_url_with_fragment(self):
         url_string = 'http://test.python.org:5432/foo/#top'
         url = Url(url_string)
         self.assertEqual('top', url.fragment)

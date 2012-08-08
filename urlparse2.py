@@ -10,7 +10,7 @@ URL_PARTS = ('scheme', 'netloc', 'path', 'params', 'query', 'fragment')
 class Url(object):
     def __init__(self, url, **kwargs):
         self._url = url
-        self.params = dict((URL_PARTS[k], v if v else None)
+        self.params = dict((URL_PARTS[k], v)
             for k, v in enumerate(urlparse(self._url)))
 
     @property

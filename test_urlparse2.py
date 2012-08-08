@@ -14,7 +14,7 @@ class TestUrlparse(unittest.TestCase):
         self.assertEqual('http://www.mozilla.org/en-US/', url.url)
         self.assertEqual('http', url.scheme)
         self.assertEqual('www.mozilla.org', url.host)
-        self.assertEqual(None, url.querystring)
+        self.assertEqual({}, url.querystring)
 
     def test_update_scheme(self):
         url = Url('http://githubbadge.appspot.com/badge/berkerpeksag?s=1')

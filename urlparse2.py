@@ -1,6 +1,6 @@
 # coding: utf-8
 
-from urlparse import urlparse, urlunparse, ParseResult, parse_qs
+from urlparse import urlparse, urlunparse, parse_qs, ParseResult
 
 URL_PARTS = ('scheme', 'netloc', 'path', 'params', 'query', 'fragment')
 

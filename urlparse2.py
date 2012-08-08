@@ -8,6 +8,8 @@ URL_PARTS = ('scheme', 'netloc', 'path', 'params', 'query', 'fragment')
 
 
 class Url(object):
+    """Parse (absolute and relative) URLs for humans."""
+
     def __init__(self, url, **kwargs):
         self._url = url
         self.params = dict((URL_PARTS[k], v)

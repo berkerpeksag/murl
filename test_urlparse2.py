@@ -14,7 +14,7 @@ class TestUrlparse(unittest.TestCase):
         self.assertEqual('http://www.mozilla.org/en-US/', url.url)
         self.assertEqual('http', url.scheme)
         self.assertEqual('www.mozilla.org', url.host)
-        self.assertEqual({}, url.querystring)
+        self.assertEqual('', url.querystring)
 
     def test_update_scheme(self):
         url = Url('http://githubbadge.appspot.com/badge/berkerpeksag?s=1')
@@ -56,12 +56,8 @@ class TestUrlparse(unittest.TestCase):
 
     def test_update_querystring_and_url(self):
         url_string = 'http://githubbadge.appspot.com/badge/berkerpeksag?s=1&a=0'
-        qs = {'a': ['0'], 's': ['1']}
         url = Url(url_string)
-        self.assertEqual(qs, url.querystring)
-        self.assertEqual(qs.get('a'), url.querystring.get('a'))
-        self.assertEqual(qs.get('s'), url.querystring.get('s'))
-        self.assertEqual(len(qs), len(url.querystring))
+        self.assertEqual('a=0&s=1', url.querystring)
 
     def test_url_with_port(self):
         url_string = 'http://test.python.org:5432/foo/#top'

@@ -1,5 +1,6 @@
 # coding: utf-8
 
+from urllib import urlencode
 from urlparse import urlparse, urlunparse, parse_qs, ParseResult
 
 #: Parts for RFC 3986 URI syntax
@@ -55,9 +56,10 @@ class Url(object):
 
     @property
     def querystring(self):
-        if self.params.get('query') is not None:
-            return parse_qs(self.params.get('query'))
-        return None
+        if self.params.get('query'):
+            return urlencode(dict((k, ''.join(map(str, v)))
+                for k, v in parse_qs(self.params.get('query')).items()))
+        return ''
 
     @property
     def fragment(self):

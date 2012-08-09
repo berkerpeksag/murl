@@ -42,6 +42,10 @@ class Url(object):
             self.params['path'] = ''
         return self.params.get('netloc')
 
+    @property
+    def netloc(self):
+        return self.host
+
     @host.setter
     def host(self, value):
         self.params['netloc'] = value

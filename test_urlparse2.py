@@ -80,6 +80,13 @@ class TestUrlparse(unittest.TestCase):
         url = Url('www.python.org')
         self.assertEqual('//www.python.org', url.host)
 
+    def test_change_host(self):
+        url_str = 'http://docs.python.org/library/urlparse.html'
+        url = Url(url_str, netloc='dev.python.org')
+        self.assertEqual('http', url.scheme)
+        self.assertEqual('dev.python.org', url.host)
+        self.assertEqual('http://dev.python.org/library/urlparse.html', url.url)
+
     def test_alias_host_netloc(self):
         url_str = 'http://docs.python.org/library/urlparse.html'
         url = Url(url_str, netloc='dev.python.org')

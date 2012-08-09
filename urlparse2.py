@@ -16,7 +16,7 @@ class Url(object):
         self.params = dict((URL_PARTS[k], v)
             for k, v in enumerate(urlparse(self._url)))
         for option, value in kwargs.items():
-            if option in kwargs and not self.params.get(option):
+            if option in kwargs:
                 self.params[option] = value
 
     @property

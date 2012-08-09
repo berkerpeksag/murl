@@ -18,14 +18,14 @@ def get_file_contents(file_path):
     return open(full_path, 'r').read()
 
 setup(
-    name='slimparse',
+    name='murl',
     version='0.1',
     description='murl is a tiny wrapper for the Python module urlparse.',
     long_description=get_file_contents('PYPI.rst'),
     author='Berker Peksag',
     author_email='berker.peksag@gmail.com',
-    url='https://github.com/berkerpeksag/slimparse',
-    py_modules=['slimparse'],
+    url='https://github.com/berkerpeksag/murl',
+    py_modules=['murl'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',

@@ -1,4 +1,4 @@
-# murl
+# murl: URL manipulation in Python, made simple
 
 [![Travis CI](https://secure.travis-ci.org/berkerpeksag/murl.png)](http://travis-ci.org/berkerpeksag/murl)
 

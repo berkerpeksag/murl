@@ -2,7 +2,7 @@
 
 [![Travis CI](https://secure.travis-ci.org/berkerpeksag/urlparse2.png)](http://travis-ci.org/berkerpeksag/urlparse2)
 
-urlparse2 is a tiny wrapper for Python's [urlparse](http://docs.python.org/library/urlparse.html) module.
+urlparse2 is a tiny wrapper for the Python module [urlparse](http://docs.python.org/library/urlparse.html).
 
 ## Installation
 

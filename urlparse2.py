@@ -11,12 +11,23 @@ URL_PARTS = ('scheme', 'netloc', 'path', 'params', 'query', 'fragment')
 class Url(object):
     """Parse (absolute and relative) URLs for humans."""
 
-    def __init__(self, url, **kwargs):
+    def __init__(self, url, **parts):
+        """
+        Constructor for Url object.
+
+        :param url:
+        :type url: string
+
+        :param parts: scheme, netloc, path, params,
+                      query, fragment
+        :type parts: dict
+        """
         self._url = url
         self.params = dict((URL_PARTS[k], v)
             for k, v in enumerate(urlparse(self._url)))
-        for option, value in kwargs.items():
-            if option in kwargs:
+
+        for option, value in parts.items():
+            if option in parts:
                 self.params[option] = value
 
     @property

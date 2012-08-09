@@ -20,7 +20,7 @@ def get_file_contents(file_path):
 setup(
     name='slimparse',
     version='0.1',
-    description='slimparser is a tiny wrapper for the Python module urlparse.',
+    description='murl is a tiny wrapper for the Python module urlparse.',
     long_description=get_file_contents('PYPI.rst'),
     author='Berker Peksag',
     author_email='berker.peksag@gmail.com',

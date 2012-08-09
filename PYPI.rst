@@ -1,25 +1,25 @@
-slimparser
+murl
 ==========
 
-.. image:: https://secure.travis-ci.org/berkerpeksag/slimparser.png
+.. image:: https://secure.travis-ci.org/berkerpeksag/murl.png
     :alt: Travis CI
-    :target: http://travis-ci.org/berkerpeksag/slimparser
+    :target: http://travis-ci.org/berkerpeksag/murl
 
-slimparser is a tiny wrapper for the Python module `urlparse <http://docs.python.org/library/urlparse.html>`_.
+murl is a tiny wrapper for the Python module `urlparse <http://docs.python.org/library/urlparse.html>`_.
 
 Installation
 ------------
 
-To install slimparser, simply::
+To install murl, simply::
 
-    $ pip install slimparser
+    $ pip install murl
 
 Usage
 -----
 
 ::
 
-    from slimparser import Url
+    from murl import Url
 
 
     url = Url('https://bugzilla.mozilla.org/show_bug.cgi?id=698201#c0')

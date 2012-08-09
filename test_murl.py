@@ -3,10 +3,10 @@
 
 import unittest
 
-from slimparser import Url
+from murl import Url
 
 
-class TestSlimParser(unittest.TestCase):
+class TestMurl(unittest.TestCase):
 
     def test_parse_url(self):
         url = Url('http://www.mozilla.org/en-US/')

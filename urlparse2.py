@@ -80,5 +80,9 @@ class Url(object):
     def fragment(self):
         return self.params.get('fragment')
 
+    @fragment.setter
+    def fragment(self, value):
+        self.params['fragment'] = value
+
     def __str__(self):
         return self.url

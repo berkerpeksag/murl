@@ -18,14 +18,14 @@ def get_file_contents(file_path):
     return open(full_path, 'r').read()
 
 setup(
-    name='urlparse2',
+    name='slimparse',
     version='0.1',
-    description='urlparse2 is a tiny wrapper for Python\'s urlparse module.',
+    description='slimparser is a tiny wrapper for the Python module urlparse.',
     long_description=get_file_contents('PYPI.rst'),
     author='Berker Peksag',
     author_email='berker.peksag@gmail.com',
-    url='https://github.com/berkrpeksag/urlparse2',
-    py_modules=['urlparse2'],
+    url='https://github.com/berkerpeksag/slimparse',
+    py_modules=['slimparse'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',

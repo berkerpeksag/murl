@@ -1,21 +1,21 @@
-# urlparse2
+# slimparser
 
-[![Travis CI](https://secure.travis-ci.org/berkerpeksag/urlparse2.png)](http://travis-ci.org/berkerpeksag/urlparse2)
+[![Travis CI](https://secure.travis-ci.org/berkerpeksag/slimparser.png)](http://travis-ci.org/berkerpeksag/slimparser)
 
-urlparse2 is a tiny wrapper for the Python module [urlparse](http://docs.python.org/library/urlparse.html).
+slimparser is a tiny wrapper for the Python module [urlparse](http://docs.python.org/library/urlparse.html).
 
 ## Installation
 
-To install urlparse2, simply:
+To install slimparser, simply:
 
 ```bash
-$ pip install urlparse2
+$ pip install slimparser
 ```
 
 ## Usage
 
 ```py
-from urlparse2 import Url
+from slimparser import Url
 
 
 url = Url('https://bugzilla.mozilla.org/show_bug.cgi?id=698201#c0')

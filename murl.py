@@ -1,7 +1,11 @@
 # coding: utf-8
 
-from urllib import urlencode
-from urlparse import urlparse, urlunparse, parse_qs, ParseResult
+try:
+    from urllib.parse import (urlencode, urlparse, urlunparse,
+                              parse_qs, ParseResult)
+except ImportError:
+    from urllib import urlencode
+    from urlparse import urlparse, urlunparse, parse_qs, ParseResult
 
 #: Parts for RFC 3986 URI syntax
 #: <scheme>://<netloc>/<path>;<params>?<query>#<fragment>

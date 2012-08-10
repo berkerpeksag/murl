@@ -19,7 +19,7 @@ def get_file_contents(file_path):
 
 setup(
     name='murl',
-    version='0.1',
+    version='0.2',
     description='murl is a tiny wrapper for the Python module urlparse.',
     long_description=get_file_contents('PYPI.rst'),
     author='Berker Peksag',

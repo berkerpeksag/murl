@@ -55,6 +55,10 @@ print url.url
 # http://bugzilla.webkit.org/list_bugs.cgi?id=698201
 ```
 
+## Development
+
+You can run tests by typing `nosetests -v`.
+
 ## License
 
 All files that are part of this project are covered by the following license, except where explicitly noted.

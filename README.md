@@ -58,33 +58,33 @@ print url.url
 
 ## Hacking
 
-To setup a local dev environment for hacking:
+To setup a local development environment for hacking:
 
-1. Clone the repo::
+1. Clone the repo:
 
-```sh
-$ git clone git://github.com/berkerpeksag/murl.git
-$ cd murl
-```
+    ```sh
+    $ git clone git://github.com/berkerpeksag/murl.git
+    $ cd murl
+   ```
 
 2. Create and activate a new virtual environment:
 
-```sh
-$ virtualenv .
-$ source bin/activate
-```
+    ```sh
+    $ virtualenv .
+    $ source bin/activate
+    ```
 
 3. Install required dependencies:
 
-```sh
-$ pip install -r requirements.txt
-```
+    ```sh
+    $ pip install -r requirements.txt
+    ```
 
 4. To run the tests, do:
 
-```sh
-$ nosetests -v
-```
+    ```sh
+    $ nosetests -v
+    ```
 
 ## License
 

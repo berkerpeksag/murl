@@ -1,5 +1,3 @@
-murl: URL manipulation in Python, made simple
-=============================================
 
 .. image:: https://secure.travis-ci.org/berkerpeksag/murl.png
     :alt: Travis CI

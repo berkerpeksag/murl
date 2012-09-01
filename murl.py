@@ -76,8 +76,7 @@ class Url(object):
     @property
     def querystring(self):
         if self.params.get('query'):
-            return urlencode(dict((k, ''.join(map(str, v)))
-                for k, v in parse_qs(self.params.get('query')).items()))
+            return urlencode(parse_qs(self.params.get('query')), doseq=True)
         return ''
 
     @property

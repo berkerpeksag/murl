@@ -80,6 +80,10 @@ class Url(object):
         return ''
 
     @property
+    def qs(self):
+        return parse_qs(self.params.get('query'))
+
+    @property
     def fragment(self):
         return self.params.get('fragment')
 

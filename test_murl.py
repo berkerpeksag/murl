@@ -95,5 +95,12 @@ class TestMurl(unittest.TestCase):
         self.assertEqual(url.netloc, url.host)
         self.assertEqual('http://dev.python.org/library/urlparse.html', url.url)
 
+    def test_manipulate_querystring(self):
+        url_string = 'http://example.com/berkerpeksag?s=1&a=0&b=berker'
+        url = Url(url_string)
+        self.assertEqual('a=0&s=1&b=berker', url.querystring)
+        self.assertEqual({'a': ['0'], 's': ['1'], 'b': ['berker']}, url.qs)
+        self.assertEqual(['0'], url.qs.get('a'))
+
 if __name__ == '__main__':
     unittest.main()

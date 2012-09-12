@@ -1,27 +1,32 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-import os
+import codecs
+import os.path
+import re
 
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+from distutils.core import setup
 
 
-# Taken from kennethreitz/requests/setup.py
-package_directory = os.path.realpath(os.path.dirname(__file__))
+def read(*parts):
+    file_path = os.path.join(os.path.dirname(__file__), *parts)
+    return codecs.open(file_path).read()
 
-def get_file_contents(file_path):
-    """Get the context of the file using full path name."""
-    full_path = os.path.join(package_directory, file_path)
-    return open(full_path, 'r').read()
+
+def find_version(*parts):
+    version_file = read(*parts)
+    version_match = re.search(r'^__version__ = [\'"]([^\'"]*)[\'"]',
+                              version_file, re.M)
+    if version_match:
+        return version_match.group(1)
+    raise RuntimeError('Unable to find version string.')
+
 
 setup(
     name='murl',
-    version='0.2',
+    version=find_version('murl.py'),
     description='murl is a tiny wrapper for the Python module urlparse.',
-    long_description=get_file_contents('PYPI.rst'),
+    long_description=read('PYPI.rst'),
     author='Berker Peksag',
     author_email='berker.peksag@gmail.com',
     url='https://github.com/berkerpeksag/murl',

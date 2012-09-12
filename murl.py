@@ -7,7 +7,7 @@ except ImportError:
     from urllib import urlencode
     from urlparse import urlparse, urlunparse, parse_qs, ParseResult
 
-__version__ = '0.2'
+__version__ = '0.3'
 
 #: Parts for RFC 3986 URI syntax
 #: <scheme>://<netloc>/<path>;<params>?<query>#<fragment>

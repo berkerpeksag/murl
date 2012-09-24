@@ -5,6 +5,11 @@ import unittest
 
 from murl import Url
 
+try:
+    unicode
+except NameError:
+    unicode = str
+
 
 class TestMurl(unittest.TestCase):
 

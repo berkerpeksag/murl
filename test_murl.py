@@ -103,5 +103,11 @@ class TestMurl(unittest.TestCase):
         self.assertEqual({'a': ['0'], 's': ['1'], 'b': ['berker']}, url.qs)
         self.assertEqual(['0'], url.qs.get('a'))
 
+    def test_unicode(self):
+        url_str = 'http://www.python.org\U+0024'
+        url = Url(url_str)
+        self.assertEqual(url_str, unicode(url))
+
+
 if __name__ == '__main__':
     unittest.main()

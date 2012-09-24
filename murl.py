@@ -7,6 +7,8 @@ except ImportError:
     from urllib import urlencode
     from urlparse import urlparse, urlunparse, parse_qs, ParseResult
 
+from utils import py2_unicode
+
 __version__ = '0.3'
 
 #: Parts for RFC 3986 URI syntax
@@ -14,6 +16,7 @@ __version__ = '0.3'
 URL_PARTS = ('scheme', 'netloc', 'path', 'params', 'query', 'fragment')
 
 
+@py2_unicode
 class Url(object):
     """Parse (absolute and relative) URLs for humans."""
 

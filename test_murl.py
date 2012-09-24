@@ -104,7 +104,7 @@ class TestMurl(unittest.TestCase):
         self.assertEqual(['0'], url.qs.get('a'))
 
     def test_unicode(self):
-        url_str = 'http://www.python.org\U+0024'
+        url_str = r'http://www.python.org\U+0024'
         url = Url(url_str)
         self.assertEqual(url_str, unicode(url))
 

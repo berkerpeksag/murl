@@ -1,9 +1,6 @@
-
 .. image:: https://secure.travis-ci.org/berkerpeksag/murl.png
     :alt: Travis CI
     :target: http://travis-ci.org/berkerpeksag/murl
-
-murl is a tiny wrapper for the Python module `urlparse <http://docs.python.org/library/urlparse.html>`_.
 
 Installation
 ------------

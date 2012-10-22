@@ -1,1 +1,1 @@
-include README.md PYPI.rst requirements.txt
+include README.md PYPI.rst requirements.txt test_murl.py

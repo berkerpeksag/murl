@@ -24,7 +24,7 @@ def find_version(*parts):
 
 setup(
     name='murl',
-    version=find_version('murl.py'),
+    version=find_version('murl/__init__.py'),
     description='murl is a tiny wrapper for the Python module urlparse.',
     long_description=read('PYPI.rst'),
     author='Berker Peksag',

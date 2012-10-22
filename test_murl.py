@@ -4,11 +4,7 @@
 import unittest
 
 from murl import Url
-
-try:
-    unicode
-except NameError:
-    unicode = str
+from murl.utils import unicode
 
 
 class TestMurl(unittest.TestCase):

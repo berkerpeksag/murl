@@ -2,6 +2,11 @@ import sys
 
 PY3 = sys.version_info[0] == 3
 
+if PY3:
+    unicode = str
+else:
+    unicode = unicode
+
 
 def py2_unicode(klass):
     if not PY3:

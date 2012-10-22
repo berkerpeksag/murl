@@ -7,9 +7,7 @@ except ImportError:
     from urllib import urlencode
     from urlparse import urlparse, urlunparse, parse_qs, ParseResult
 
-from utils import py2_unicode
-
-__version__ = '0.3'
+from murl.utils import py2_unicode
 
 #: Parts for RFC 3986 URI syntax
 #: <scheme>://<netloc>/<path>;<params>?<query>#<fragment>

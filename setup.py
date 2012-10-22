@@ -30,7 +30,7 @@ setup(
     author='Berker Peksag',
     author_email='berker.peksag@gmail.com',
     url='https://github.com/berkerpeksag/murl',
-    py_modules=['murl'],
+    packages=['murl'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',

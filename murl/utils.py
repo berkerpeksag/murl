@@ -4,8 +4,7 @@ PY3 = sys.version_info[0] == 3
 
 if PY3:
     unicode = str
-else:
-    unicode = unicode
+    str = bytes
 
 
 def py2_unicode(klass):

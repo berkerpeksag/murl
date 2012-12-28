@@ -77,7 +77,7 @@ To setup a local development environment for hacking:
 3. Install required dependencies:
 
     ```sh
-    $ pip install -r requirements.txt
+    $ pip install -r requirements-dev.txt
     ```
 
 4. To run the tests, do:

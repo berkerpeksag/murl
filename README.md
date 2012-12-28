@@ -70,8 +70,8 @@ To setup a local development environment for hacking:
 2. Create and activate a new virtual environment:
 
     ```sh
-    $ virtualenv .
-    $ source bin/activate
+    $ virtualenv <your_venv_name>
+    $ source <your_venv_name>/bin/activate
     ```
 
 3. Install required dependencies:

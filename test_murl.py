@@ -55,7 +55,7 @@ class TestMurl(unittest.TestCase):
 
     def test_update_querystring_and_url(self):
         url = Url('http://githubbadge.appspot.com/badge/berkerpeksag?s=1&a=0')
-        self.assertEqual('a=0&s=1', url.querystring)
+        self.assertEqual({'a': ['0'], 's': ['1']}, url.qs)
 
     def test_url_with_port(self):
         url_string = 'http://test.python.org:5432/foo/#top'
@@ -98,7 +98,6 @@ class TestMurl(unittest.TestCase):
     def test_manipulate_querystring(self):
         url_string = 'http://example.com/berkerpeksag?s=1&a=0&b=berker'
         url = Url(url_string)
-        self.assertEqual('a=0&s=1&b=berker', url.querystring)
         self.assertEqual({'a': ['0'], 's': ['1'], 'b': ['berker']}, url.qs)
         self.assertEqual(['0'], url.qs.get('a'))
 

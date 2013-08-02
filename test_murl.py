@@ -1,11 +1,8 @@
 from __future__ import unicode_literals
-#!/usr/bin/env python
-# coding: utf-8
 
 import unittest
 
 from murl import Url
-from murl.utils import unicode
 
 
 class TestMurl(unittest.TestCase):
@@ -104,12 +101,6 @@ class TestMurl(unittest.TestCase):
         self.assertEqual('a=0&s=1&b=berker', url.querystring)
         self.assertEqual({'a': ['0'], 's': ['1'], 'b': ['berker']}, url.qs)
         self.assertEqual(['0'], url.qs.get('a'))
-
-    def test_unicode(self):
-        url_str = r'http://www.python.org\U+0024'
-        url = Url(url_str)
-        self.assertEqual(url_str, unicode(url))
-
 
 if __name__ == '__main__':
     unittest.main()

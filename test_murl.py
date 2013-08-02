@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 #!/usr/bin/env python
 # coding: utf-8
 

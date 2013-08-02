@@ -50,8 +50,8 @@ class TestMurl(unittest.TestCase):
         url.path = 'badge/BYK'
         self.assertEqual('badge/BYK', url.path)
         self.assertNotEqual(old_path, url.path)
-        self.assertEqual(
-            'http://githubbadge.appspot.com/badge/BYK?s=1', url.url)
+        self.assertEqual('http://githubbadge.appspot.com/badge/BYK?s=1',
+                         url.url)
 
     def test_update_querystring_and_url(self):
         url = Url('http://githubbadge.appspot.com/badge/berkerpeksag?s=1&a=0')
@@ -84,7 +84,7 @@ class TestMurl(unittest.TestCase):
         self.assertEqual('http', url.scheme)
         self.assertEqual('dev.python.org', url.host)
         self.assertEqual('http://dev.python.org/library/urlparse.html',
-            url.url)
+                         url.url)
 
     def test_alias_host_netloc(self):
         url_str = 'http://docs.python.org/library/urlparse.html'
@@ -93,7 +93,7 @@ class TestMurl(unittest.TestCase):
         self.assertEqual('dev.python.org', url.netloc)
         self.assertEqual(url.netloc, url.host)
         self.assertEqual('http://dev.python.org/library/urlparse.html',
-            url.url)
+                         url.url)
 
     def test_manipulate_querystring(self):
         url_string = 'http://example.com/berkerpeksag?s=1&a=0&b=berker'

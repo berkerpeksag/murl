@@ -97,5 +97,9 @@ class Url(object):
     def fragment(self, value):
         self.params['fragment'] = value
 
-    def __str__(self):
-        return self.url
+    def __repr__(self):
+        return '<{}: {}>'.format(Url.__name__, self.url)
+
+    def __dir__(self):
+        return ['url', 'scheme', 'netloc', 'host', 'path', 'querystring',
+                'qs', 'fragment']

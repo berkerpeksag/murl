@@ -11,7 +11,7 @@ except ImportError:
 
 __all__ = ['Url']
 
-__version__ = '0.3.1'
+__version__ = '0.3.2'
 
 #: Parts for RFC 3986 URI syntax
 #: <scheme>://<netloc>/<path>;<params>?<query>#<fragment>

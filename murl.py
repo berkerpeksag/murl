@@ -9,14 +9,15 @@ except ImportError:
     from urllib import urlencode
     from urlparse import urlparse, urlunparse, parse_qs, ParseResult
 
-from murl.utils import py2_unicode
+__all__ = ['Url']
+
+__version__ = '0.3.1'
 
 #: Parts for RFC 3986 URI syntax
 #: <scheme>://<netloc>/<path>;<params>?<query>#<fragment>
 URL_PARTS = ('scheme', 'netloc', 'path', 'params', 'query', 'fragment')
 
 
-@py2_unicode
 class Url(object):
     """Parse (absolute and relative) URLs for humans."""
 

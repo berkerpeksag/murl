@@ -21,13 +21,13 @@ def find_version(*parts):
 
 setup(
     name='murl',
-    version=find_version('murl/__init__.py'),
+    version=find_version('murl.py'),
     description='murl is a tiny wrapper for the Python module urlparse.',
     long_description=read('PYPI.rst'),
     author='Berker Peksag',
     author_email='berker.peksag@gmail.com',
     url='https://github.com/berkerpeksag/murl',
-    packages=['murl'],
+    py_modules=['murl'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',

@@ -13,7 +13,7 @@ Code:
 Documentation:
     http://murl.rtfd.org/
 
-PyPI page:
+PyPI:
     http://pypi.python.org/pypi/murl/
 
 License:

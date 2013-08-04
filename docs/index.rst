@@ -6,6 +6,10 @@ murl is a tiny wrapper for the Python module urlparse_.
 :Source: https://github.com/berkerpeksag/murl/
 :Issues: https://github.com/berkerpeksag/murl/issues/
 :PyPI: http://pypi.python.org/pypi/murl/
+:Build status:
+    .. image:: https://secure.travis-ci.org/berkerpeksag/murl.png
+        :alt: Travis CI
+        :target: http://travis-ci.org/berkerpeksag/murl/
 
 
 Getting Started

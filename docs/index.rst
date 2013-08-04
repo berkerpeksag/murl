@@ -140,4 +140,4 @@ license, except where explicitly noted.
 
 
 .. _urlparse: http://docs.python.org/library/urlparse.html
-.. _GitHub: https://github.com/berkerpeksag/murl/>
+.. _GitHub: https://github.com/berkerpeksag/murl/

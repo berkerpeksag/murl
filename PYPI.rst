@@ -1,16 +1,33 @@
-.. image:: https://secure.travis-ci.org/berkerpeksag/murl.png
-    :alt: Travis CI
-    :target: http://travis-ci.org/berkerpeksag/murl
+Project details
+---------------
+
+Code:
+    http://github.com/berkerpeksag/murl
+
+Issues:
+    https://github.com/berkerpeksag/murl/issues/
+
+Documentation:
+    http://murl.rtfd.org/
+
+Build status:
+    .. image:: https://secure.travis-ci.org/berkerpeksag/murl.png
+        :alt: Travis CI
+        :target: http://travis-ci.org/berkerpeksag/murl/
+
 
 Installation
 ------------
 
-To install murl, simply::
+Install with **pip**::
 
     $ pip install murl
 
-Usage
------
+
+Getting Started
+---------------
+
+.. note:: Detailed documentation can be found on http://murl.rtfd.org/.
 
 ::
 
@@ -52,6 +69,7 @@ Usage
     print url.url
     # ''
     # http://bugzilla.webkit.org/list_bugs.cgi?id=698201
+
 
 License
 -------

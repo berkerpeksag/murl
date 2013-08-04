@@ -62,7 +62,19 @@ List all attributes of a :class:`Url` object
 Objects
 -------
 
-.. class:: Url
+.. class:: Url(url[, **parts])
+
+   The *url* parameter should be a :class:`str` object.
+
+   The *parts* dictionary should be one of them: ``scheme``, ``netloc``,
+   ``path``, ``params``, ``query``, ``fragment``.
+
+   ::
+
+       >>> url = murl.Url('http://www.google.com', path='about')
+       >>> url
+       <Url: http://www.google.com/about>
+
 
    .. attribute:: url
 

@@ -28,13 +28,11 @@ setup(
     author_email='berker.peksag@gmail.com',
     url='https://github.com/berkerpeksag/murl',
     py_modules=['murl'],
-    zip_safe=False,
-    include_package_data=True,
     platforms='any',
     license='Mozilla Public License, v. 2.0',
     classifiers=(
-        'Natural Language :: English',
-        'Intended Audience :: Developers',
+        'Development Status :: 5 - Production/Stable',
+        'Topic :: Internet :: WWW/HTTP',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.6',
@@ -42,6 +40,6 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 3.3',
+        'License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)',
     ),
-    test_suite='nose.collector',
 )

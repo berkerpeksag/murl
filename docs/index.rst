@@ -97,6 +97,10 @@ Objects
 
    .. attribute:: fragment
 
+   .. method:: __repr__
+
+      .. versionadded:: 0.4
+
 
 Hacking
 -------

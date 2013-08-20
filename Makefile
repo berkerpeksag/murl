@@ -9,6 +9,3 @@ clean:
 	rm -rf dist/
 	rm MANIFEST
 	find . -name "*.pyc" -exec rm {} \;
-
-pyc:
-	find . -name "*.pyc" -exec rm {} \;

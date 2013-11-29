@@ -19,7 +19,7 @@ Install with **pip**:
 
 .. code-block:: bash
 
-    $ pip install pyresto
+    $ pip install murl
 
 or clone the latest version from GitHub_.
 

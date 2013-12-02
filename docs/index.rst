@@ -49,7 +49,7 @@ Mutating the :class:`Url` object
     >>> url.scheme
     'http'
 
-You can also can change the *port* attribute if it is defined::
+You can also change the *port* attribute if it is defined::
 
     >>> url = Url('http://test.python.org:8080/foo/#top')
     >>> url.port

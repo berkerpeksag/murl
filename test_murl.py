@@ -63,6 +63,40 @@ class TestMurl(unittest.TestCase):
         self.assertEqual('test.python.org:5432', url.host)
         self.assertEqual('/foo/', url.path)
 
+    def test_get_port(self):
+        """When a URL contains a port test it is returned correctly"""
+        url_string = 'http://test.python.org:8080/foo/#top'
+        url = Url(url_string)
+        self.assertEqual(8080, url.port)
+        self.assertEqual('test.python.org:8080', url.host)
+        self.assertEqual('test.python.org:8080', url.netloc)
+
+    def test_url_no_port(self):
+        """When a URL does not contain a port test that None is returned"""
+        url_string = 'http://test.python.org/foo/#top'
+        url = Url(url_string)
+        self.assertEqual(None, url.port)
+        self.assertEqual('test.python.org', url.host)
+        self.assertEqual('test.python.org', url.netloc)
+
+    def test_set_port(self):
+        """When a URL does not contain a port test we can set one"""
+        url_string = 'http://test.python.org/foo/#top'
+        url = Url(url_string)
+        url.port = 8080
+        self.assertEqual(8080, url.port)
+        self.assertEqual('http://test.python.org:8080/foo/#top', url.url)
+        self.assertEqual('test.python.org:8080', url.netloc)
+
+    def test_update_url_and_port(self):
+        """When a URL contains a port test that we can update it"""
+        url_string = 'http://test.python.org:8080/foo/#top'
+        url = Url(url_string)
+        url.port = 9000
+        self.assertEqual(9000, url.port)
+        self.assertEqual('http://test.python.org:9000/foo/#top', url.url)
+        self.assertEqual('test.python.org:9000', url.netloc)
+
     def test_url_with_fragment(self):
         url_string = 'http://test.python.org:5432/foo/#top'
         url = Url(url_string)

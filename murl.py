@@ -11,7 +11,7 @@ except ImportError:
 
 __all__ = ['Url']
 
-__version__ = '0.4'
+__version__ = '0.5'
 
 #: Parts for RFC 3986 URI syntax
 #: <scheme>://<netloc>/<path>;<params>?<query>#<fragment>
@@ -72,6 +72,20 @@ class Url(object):
         self.params['netloc'] = value
 
     @property
+    def port(self):
+        return urlparse(self._url).port
+
+    @port.setter
+    def port(self, value):
+        if self.port:
+            host = ":".join(self.params['netloc'].split(":")[:-1])
+            self.params['netloc'] = "{host}:{port}".format(host=host, port=value)
+        else:
+            self.params['netloc'] += ":{port}".format(port=value)
+
+        self._url = urlunparse(ParseResult(**self.params))
+
+    @property
     def path(self):
         return self.params.get('path')
 
@@ -104,5 +118,5 @@ class Url(object):
         return self.url
 
     def __dir__(self):
-        return ['url', 'scheme', 'netloc', 'host', 'path', 'querystring',
+        return ['url', 'scheme', 'netloc', 'host', 'port', 'path', 'querystring',
                 'qs', 'fragment']

@@ -49,6 +49,15 @@ Mutating the :class:`Url` object
     >>> url.scheme
     'http'
 
+You can also can change the *port* attribute if it is defined::
+
+    >>> url = Url('http://test.python.org:8080/foo/#top')
+    >>> url.port
+    8080
+    >>> url.port = 3000
+    >>> url.port
+    3000
+
 
 List all attributes of a :class:`Url` object
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -56,7 +65,7 @@ List all attributes of a :class:`Url` object
 ::
 
     >>> dir(url)
-    [u'fragment', u'host', u'netloc', u'path', u'qs', u'querystring', u'scheme', u'url']
+    [u'fragment', u'host', u'netloc', u'path', u'port', u'qs', u'querystring', u'scheme', u'url']
 
 
 Objects
@@ -83,6 +92,10 @@ Objects
    .. attribute:: host
 
    .. attribute:: path
+
+   .. attribute:: port
+
+      .. versionadded:: 0.5
 
    .. attribute:: querystring
 

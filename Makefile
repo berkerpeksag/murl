@@ -1,9 +1,9 @@
 release:
-	python setup.py sdist upload -r pypi
+	python setup.py sdist bdist_wheel upload -r pypi
 
 # Test it via `pip install -i https://testpypi.python.org/pypi murl`
 test-release:
-	python setup.py sdist upload -r test
+	python setup.py sdist bdist_wheel upload -r test
 
 clean:
 	rm -rf dist/

@@ -40,6 +40,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
         'License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)',
     ],
 )

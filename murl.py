@@ -34,7 +34,7 @@ class Url(object):
         """
         self._url = url
         self.params = dict((URL_PARTS[k], v)
-            for k, v in enumerate(urlparse(self._url)))
+                           for k, v in enumerate(urlparse(self._url)))
 
         for option, value in parts.items():
             if option in parts:
@@ -79,7 +79,8 @@ class Url(object):
     def port(self, value):
         if self.port:
             host = ":".join(self.params['netloc'].split(":")[:-1])
-            self.params['netloc'] = "{host}:{port}".format(host=host, port=value)
+            self.params['netloc'] = "{host}:{port}".format(host=host,
+                                                           port=value)
         else:
             self.params['netloc'] += ":{port}".format(port=value)
 
@@ -118,5 +119,5 @@ class Url(object):
         return self.url
 
     def __dir__(self):
-        return ['url', 'scheme', 'netloc', 'host', 'port', 'path', 'querystring',
-                'qs', 'fragment']
+        return ['url', 'scheme', 'netloc', 'host', 'port', 'path',
+                'querystring', 'qs', 'fragment']

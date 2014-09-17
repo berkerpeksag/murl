@@ -115,6 +115,15 @@ Objects
       .. versionadded:: 0.4
 
 
+Changelog
+---------
+
+.. toctree::
+   :maxdepth: 2
+
+   changelog
+
+
 Hacking
 -------
 

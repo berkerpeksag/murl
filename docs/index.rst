@@ -133,13 +133,13 @@ To setup a local development environment for hacking:
 
 1. Clone the repo::
 
-    $ git clone git://github.com/berkerpeksag/murl.git
+    $ git clone https://github.com/berkerpeksag/murl.git
     $ cd murl
 
 2. Create and activate a new virtual environment::
 
-    $ virtualenv <your_venv_name>
-    $ source <your_venv_name>/bin/activate
+    $ python3.4 -m venv <your_venv_name>
+    $ . <your_venv_name>/bin/activate
 
 3. Install required dependencies::
 
@@ -147,7 +147,7 @@ To setup a local development environment for hacking:
 
 4. To run the tests, do::
 
-    $ nosetests -v
+    $ nosetests
 
 
 License

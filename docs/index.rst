@@ -1,5 +1,6 @@
+#############################################
 murl: URL manipulation in Python, made simple
-=============================================
+#############################################
 
 murl is a tiny wrapper for the Python module urlparse_.
 
@@ -13,7 +14,7 @@ murl is a tiny wrapper for the Python module urlparse_.
 
 
 Getting Started
----------------
+===============
 
 Install with **pip**:
 
@@ -25,10 +26,10 @@ or clone the latest version from GitHub_.
 
 
 Usage
------
+=====
 
 Creating a :class:`Url` object
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------
 
 ::
 
@@ -39,7 +40,7 @@ Creating a :class:`Url` object
 
 
 Mutating the :class:`Url` object
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 ::
 
@@ -60,7 +61,7 @@ You can also change the *port* attribute if it is defined::
 
 
 List all attributes of a :class:`Url` object
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------
 
 ::
 
@@ -69,7 +70,7 @@ List all attributes of a :class:`Url` object
 
 
 Objects
--------
+=======
 
 .. class:: Url(url[, \*\*parts])
 
@@ -116,16 +117,25 @@ Objects
 
 
 Changelog
----------
+=========
 
-.. toctree::
-   :maxdepth: 2
+0.5.1
+-----
 
-   changelog
+:Release date: 2014-09-17
+
+* Fix installation in Python 3.
+
+0.5.0
+-----
+
+:Release date: 2013-12-02
+
+* Add a *port* attribute to the :class:`Url`. (Contributed by Aaron Bassett)
 
 
 Hacking
--------
+=======
 
 .. highlight:: bash
 
@@ -151,7 +161,7 @@ To setup a local development environment for hacking:
 
 
 License
--------
+=======
 
 All files that are part of this project are covered by the following
 license, except where explicitly noted.

@@ -1,3 +1,4 @@
-nose==1.1.2
-Sphinx==1.2b1
-wheel==0.23.0
+nose
+wheel
+Sphinx
+sphinx_rtd_theme

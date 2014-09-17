@@ -71,7 +71,7 @@ List all attributes of a :class:`Url` object
 Objects
 -------
 
-.. class:: Url(url[, **parts])
+.. class:: Url(url[, \*\*parts])
 
    The *url* parameter should be a :class:`str` object.
 

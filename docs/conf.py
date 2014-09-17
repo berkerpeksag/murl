@@ -28,7 +28,7 @@ copyright = u'2013, Berker Peksag'
 # built documents.
 #
 # The short X.Y version.
-version = '0.5'
+version = '0.5.1'
 # The full version, including alpha/beta/rc tags.
 release = version
 

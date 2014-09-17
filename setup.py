@@ -7,7 +7,7 @@ from distutils.core import setup
 
 def read(*parts):
     file_path = os.path.join(os.path.dirname(__file__), *parts)
-    return codecs.open(file_path).read()
+    return codecs.open(file_path, encoding='utf-8').read()
 
 
 def find_version(*parts):
